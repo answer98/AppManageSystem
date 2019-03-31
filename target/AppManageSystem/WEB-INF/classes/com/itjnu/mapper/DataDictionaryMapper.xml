@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.itjnu.mapper.DataDictionaryMapper">
+  <select id="queryAllAppStatus" resultType="com.itjnu.pojo.DataDictionary">
+    SELECT id,type_code,value_id,value_name
+    FROM data_dictionary
+    WHERE type_code = 'APP_STATUS'
+  </select>
+
+  <select id="queryAllFlatform" resultType="com.itjnu.pojo.DataDictionary">
+    SELECT id,type_code,value_id,value_name
+    FROM data_dictionary
+    WHERE type_code = 'APP_FLATFORM'
+  </select>
+</mapper>
